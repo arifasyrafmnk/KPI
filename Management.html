@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assessment</title>
+	<style>
+	body{background-image: url('http://i.stack.imgur.com/jGlzr.png');	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.active {
+		background-color: #5889d8;
+
+	}
+	li a, .dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+		background-color: red;
+	}
+
+	li.dropdown {
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: middle;
+		padding: 8px;
+		font-size: 14px;
+	}
+	tr{background-color: #fcf7f7;}
+	p {
+		font-family: sans-serif;
+	}
+	.radio_padding { width: 10%; display: inline-block;}
+	</style>
+	<script>
+	function validateForm() {
+		var x = document.forms["namaForm"]["Ename"].value;
+		if (x == "") {
+			alert("Name must be filled out");
+			return false;
+		}
+	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li><a href="Home.html">Home</a></li>
+		<li class="dropdown">
+			<a class="active" href="#Assessment" class="dropbtn">Assessment</a>
+			<div class="dropdown-content">
+				<a href="Management.html">Management Appraisal</a>
+				<a href="Group.html">Group Appraisal</a>
+				<!--<a href="#">Link 3</a> -->
+			</div>
+		</li>
+		<!--<li><a href="#contact">Contact</a></li> -->
+		<li style="float:right"><a href="Login.html	">Logout</a></li>
+	</ul><br>
+	<table>
+		<p><b>Followings are the legends for assessing the employees starting from 0 to 4</b></p>
+		<tr style="background-color: grey">
+			<th>Matrix</th>
+			<th>Description</th>
+			<th>0</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+		</tr>
+		<tr>
+			<th>Attendance</th>
+			<th>Leave which is not approved/ personal leave/ Emergency leave with no validation will be assessed</th>
+			<th>97% and below</th>
+			<th>>97%</th>
+			<th>>98%</th>
+			<th>>99%</th>
+			<th>100%</th>
+		</tr>
+		<tr>
+			<th>Punctuality</th>
+			<th>Lateness based on accumulated clock-in minutes</th>
+			<th>>360 minutes</th>
+			<th><360 minutes</th>
+				<th><240 minutes</th>
+					<th><120 minutes </th>
+						<th>Never late</th>
+					</tr>
+					<tr>
+						<th>Ability to deliver on time and meeting datelines</th>
+						<th>Meeting deadlines set for project and assignments.</th>
+						<th>always late</th>
+						<th>late and partially</th>
+						<th>On time partially</th>
+						<th>On time fully completed</th>
+						<th>Early with completion</th>
+					</tr>
+					<tr>
+						<th>Meeting KPI set for the year</th>
+						<th>Negotiation of achievement rates with your supervisor and manager</th>
+						<th>None achieved</th>
+						<th>Completed 25%</th>
+						<th>Completed 50%</th>
+						<th>Completed 75%</th>
+						<th>Completed 100%</th>
+					</tr>
+					<tr>
+						<th>Proactiveness in getting things solve</th>
+						<th>Ability to spot problems areas and resolve them without needing reminders and ticker. </th>
+						<th>Never</th>
+						<th>Seldom</th>
+						<th>Some effort seen</th>
+						<th>At times Proactive</th>
+						<th>Very proactive</th>
+					</tr>
+					<tr>
+						<th>Continuously improving process and methodology</th>
+						<th>Initiative to see areas of improvements</th>
+						<th>Never</th>
+						<th>Seldom</th>
+						<th>Some effort seen</th>
+						<th>At times Improved</th>
+						<th>Very Improved</th>
+					</tr>
+					<tr>
+						<th>Responsible & accountable</th>
+						<th>Ownership of daily task and issues.</th>
+						<th>Never</th>
+						<th>Seldom</th>
+						<th>Some effort seen</th>
+						<th>At times Responsible</th>
+						<th>Very Responsible</th>
+					</tr>
+				</table> <br><br><br>
+
+				<table>
+					<tr>
+						<th style="text-align: left; width:15%;">Engineer Name: </th>
+						<th><input type="text" name="Ename" style="width: 250px"></th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Attendance</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="attendance" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="attendance" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="attendance" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="attendance" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="attendance" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Punctuality</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="punctuality" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="punctuality" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="punctuality" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="punctuality" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="punctuality" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Deliverance</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="deliverance" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="deliverance" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="deliverance" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="deliverance" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="deliverance" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">KPI Accomplishment</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="accomplishment" value="0*0.20" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="accomplishment" value="1*0.20" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="accomplishment" value="2*0.20" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="accomplishment" value="3*0.20" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="accomplishment" value="4*0.20" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Proactiveness</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="proactiveness" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="proactiveness" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="proactiveness" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="proactiveness" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="proactiveness" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Self-improvement</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="improvements" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="improvements" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="improvements" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="improvements" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="improvements" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th style="text-align: left;">Responsibility</th>
+						<th>
+							<div class="radio_padding">
+								<input type="radio" name="responsibility" value="0*0.05" id="butang">0
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="responsibility" value="1*0.05" id="butang">1
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="responsibility" value="2*0.05" id="butang">2
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="responsibility" value="3*0.05" id="butang">3
+							</div>
+							<div class="radio_padding">
+								<input type="radio" name="responsibility" value="4*0.05" id="butang">4
+							</div>
+						</th>
+					</tr>
+					<form name="namaForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+						<input type="submit" value="Submit" style="float:right; padding:10px; background-color:#fcf7f7;">
+					</form>
+				</table>
+			</body>
+			</html>

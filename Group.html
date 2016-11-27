@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assessment</title>
+<style>
+  body{background-image: url('http://i.stack.imgur.com/jGlzr.png'); }
+	ul {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: #333;
+}
+
+	li {
+    	float: left;
+}
+
+	li a {
+    	display: block;
+	    color: white;
+	    text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+}
+
+	.active {
+    	background-color: #5889d8;
+
+}
+.radio_padding { width: 10%; display: inline-block;}
+	li a, .dropbtn {
+    	display: inline-block;
+    	color: white;
+    	text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+}
+
+	li a:hover, .dropdown:hover .dropbtn {
+    	background-color: red;
+}
+
+	li.dropdown {
+    	display: inline-block;
+}
+
+	.dropdown-content {
+    	display: none;
+   	 	position: absolute;
+    	background-color: #f9f9f9;
+    	min-width: 160px;
+    	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+	.dropdown-content a {
+    	color: black;
+    	padding: 12px 16px;
+    	text-decoration: none;
+    	display: block;
+    	text-align: left;
+}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+    	display: block;
+}
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: middle;
+    	padding: 8px;
+      font-size: 14px;
+}
+tr{background-color: #fcf7f7;}
+  p {
+    font-family: sans-serif;
+}
+</style>
+<script>
+function validateForm() {
+    var x = document.forms["namaForm"]["Ename"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+	<ul>
+  		<li><a href="Home.html">Home</a></li>
+  		<li class="dropdown">
+    		<a class="active" href="#Assessment" class="dropbtn">Assessment</a>
+    		<div class="dropdown-content">
+      			<a href="Management.html">Management Appraisal</a>
+      			<a href="Group.html">Group Appraisal</a>
+      			<!--<a href="#">Link 3</a> -->
+      		</div>
+      	</li>
+  		<!--<li><a href="#contact">Contact</a></li> -->
+  		<li style="float:right"><a href="Login.html	">Logout</a></li>
+	</ul><br>
+  <table>
+      <p><b>Followings are the legends for assessing the employees starting from 0 to 4</b></p>
+      <tr style="background-color: grey">
+          <th>Matrix</th>
+          <th>Description</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+      </tr>
+      <tr>
+          <th>Communication skills</th>
+          <th>Ability to interact with all levels of people,convey intended message</th>
+          <th>Very poor</th>
+          <th>Can relay but with broken language</th>
+          <th>Good command of language</th>
+          <th>Can relay communication with good understanding</th>
+          <th>Great Communicator</th>
+      </tr>
+      <tr>
+          <th>Personal appearance and Image</th>
+          <th>Breath, clothing, body odor, body posture, facial, hair and professional image.</th>
+          <th>Poor and non pleasing</th>
+          <th>Expected</th>
+          <th>Pleasant</th>
+          <th>Impressionable</th>
+          <th>Very impressionable</th>
+      </tr>
+      <tr>
+          <th>Doing beyond call of duty</th>
+          <th>Providing extra effort without the need to be requested </th>
+          <th>Poor</th>
+          <th>below expectation</th>
+          <th>As expected</th>
+          <th>Good</th>
+          <th>Constantly surpassing expectation</th>
+      </tr>
+      <tr>
+          <th>Creativity in problem solving</th>
+          <th>Providing solutions which are feasible and effective.</th>
+          <th>Leave problem as it is</th>
+          <th>Always check with senior</th>
+          <th>Some effort seen</th>
+          <th>Creative but lack feasibility</th>
+          <th>Very creative problem solving</th>
+      </tr>
+      <tr>
+          <th>Ability to Train & Lead</th>
+          <th>Ability to guide, mentor, lead and teach peers and juniors</th>
+          <th>Never try</th>
+          <th>Poor</th>
+          <th>Moderate</th>
+          <th>Reasonable and expected</th>
+          <th>Great trainer and leader</th>
+      </tr>
+      <tr>
+          <th>Attitude and Servitude</th>
+          <th>Constant delivery service with the best of emotions and positive impression.</th>
+          <th>Poor</th>
+          <th>Expected</th>
+          <th>Some effort seen</th>
+          <th>Occasionally surpassed expectation</th>
+          <th>Constantly surpassing expectation</th>
+      </tr>
+      <tr>
+          <th>Good Team Player and ability to work in Team</th>
+          <th>Ability to work hand in hand to achieve goals and objectives</th>
+          <th>Not a team player</th>
+          <th>Follower with no contribution</th>
+          <th>Limited Contribution</th>
+          <th>Always contributing and helping others</th>
+          <th>Outstanding team player </th>
+      </tr>
+      <tr>
+          <th>Good organization of workspace</th>
+          <th>General cleanliness and tidiness of workspace</th>
+          <th>Dirty and messy</th>
+          <th>Messy</th>
+          <th>Occasionally messy</th>
+          <th>Neat, clean and tidy</th>
+          <th>Impressive workspace</th>
+      </tr>
+  </table><br><br><br>
+<table>
+	<form action="Home.html" method="GET">
+  <tr>
+    <th style="text-align: left;">Engineer Name: </th>
+    <th><input type="text" name="Ename" style="width: 250px"></th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Communication Skill</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="communication" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="communication" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="communication" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="communication" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="communication" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Appearance</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="appearance" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="appearance" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="appearance" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="appearance" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="appearance" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Extra-effortness</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="effort" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="effort" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="effort" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="effort" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="effort" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Problem Solving Creativity</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="creativity" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="creativity" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="creativity" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="creativity" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="creativity" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Ability to Lead</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="ability" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="ability" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="ability" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="ability" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="ability" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Attitude and Servitude</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="attitude" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="attitude" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="attitude" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="attitude" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="attitude" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Team Player</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="teamplayer" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="teamplayer" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="teamplayer" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="teamplayer" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="teamplayer" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">Workspace Organization</th>
+    <th><div class="radio_padding">
+          <input type="radio" name="workspace" value="0" id="butang">0
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="workspace" value="1" id="butang">1
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="workspace" value="2" id="butang">2
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="workspace" value="3" id="butang">3
+        </div>
+        <div class="radio_padding">
+          <input type="radio" name="workspace" value="4" id="butang">4
+        </div>
+    </th>
+  </tr>
+<form name="namaForm" action="demo_form.asp"
+onsubmit="return validateForm()" method="post">
+<input type="submit" value="Submit" style="float: right; padding: 10px; background-color: #fcf7f7;" >
+</form>
+</table>
+</body>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assessment</title>
+	<style>
+	body{background-image: url('http://i.stack.imgur.com/jGlzr.png');	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.active {
+		background-color: #5889d8;
+
+	}
+	li a, .dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+		background-color: red;
+	}
+
+	li.dropdown {
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: center;;
+		padding: 8px;
+	}
+	</style>
+	<script type="text/javascript">
+	function getParameterByName(name, url) {
+		if (!url) {
+			url = window.location.href;
+		}
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	</script>
+</head>
+<body>
+	<ul>
+		<li><a class="active" href="Home.html">Home</a></li>
+		<li class="dropdown">
+			<a href="#Assessment" class="dropbtn">Assessment</a>
+			<div class="dropdown-content">
+				<a href="assessment.html" onclick="showManagement()">Management Appraisal</a>
+        <a href="assessment.html" onclick="showGroup()">Group Appraisal</a>
+				<!--<a href="#">Link 3</a> -->
+			</div>
+		</li>
+		<!--<li><a href="#contact">Contact</a></li> -->
+		<li style="float:right"><a href="Login.html">Logout</a></li>
+	</ul> <br/><br/><br/>
+	<table>
+		<tr style="background-color: grey">
+			<th colspan="100"><b>Management Appraisal</b></th>
+		</tr>
+		<tr style="background-color: grey">
+			<th>Engineer Name</th>
+			<th>Attendance</th>
+			<th>Punctuality</th>
+			<th>Deliverance</th>
+			<th>KPI Accomplishment</th>
+			<th>Proactiveness</th>
+			<th>Self-improvement</th>
+			<th>Responsibility</th>
+			<th>KPI Percentage</th>
+		</tr>
+		<tr>
+			<th id="m_Ename_management">0</th>
+			<th id="m_Attendance">0</th>
+			<th id="m_Punctuality">0</th>
+			<th id="m_Deliverance">0</th>
+			<th id="m_KPI_Accomplishment">0</th>
+			<th id="m_Proactiveness">0</th>
+			<th id="m_Self_improvement">0</th>
+			<th id="m_Responsibility">0</th>
+			<th id="m_KPI_Percentage">0</th>
+		</tr>
+	</table><br><br>
+	<table>
+		<tr style="background-color: grey">
+			<th colspan="100"><b>Group Appraisal</b></th>
+		</tr>
+		<tr style="background-color: grey">
+			<th>Engineer Name</th>
+			<th>Communication Skill</th>
+			<th>Appearance</th>
+			<th>Extra-effortness</th>
+			<th>Problem Solving</th>
+			<th>Ability to Lead</th>
+			<th>Attitude &amp; Servitude</th>
+			<th>Team Player</th>
+			<th>Workspace Organization</th>
+			<th>KPI Percentage</th>
+		</tr>
+		<tr>
+			<td id="g_Ename_group">0</td>
+			<td id="g_Communication_Skill">0</td>
+			<td id="g_Appearance">0</td>
+			<td id="g_Extra_effortness">0</td>
+			<td id="g_Problem_solving">0</td>
+			<td id="g_Ability_to_Lead">0</td>
+			<td id="g_Attitude_Servitude">0</td>
+			<td id="g_Team_Player">0</td>
+			<td id="g_Workspace_Organization">0</td>
+			<td id="g_KPI_Percentage">0</td>
+		</tr>
+	</table>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('#m_Ename_management')[0].innerHTML= getParameterByName('Ename_management');
+		$('#m_Attendance')[0].innerHTML= getParameterByName('attendance');
+		$('#m_Punctuality')[0].innerHTML= getParameterByName('punctuality');
+		$('#m_Deliverance')[0].innerHTML= getParameterByName('deliverance');
+		$('#m_KPI_Accomplishment')[0].innerHTML= getParameterByName('accomplishment');
+		$('#m_Proactiveness')[0].innerHTML= getParameterByName('proactiveness');
+		$('#m_Self_improvement')[0].innerHTML= getParameterByName('improvements');
+		$('#m_Responsibility')[0].innerHTML= getParameterByName('responsibility');
+
+		$('#g_Ename_group')[0].innerHTML= getParameterByName('Ename_group');
+		$('#g_Communication_Skill')[0].innerHTML= parseInt(getParameterByName('communication'));
+		$('#g_Appearance')[0].innerHTML= parseInt(getParameterByName('appearance'));
+		$('#g_Extra_effortness')[0].innerHTML= parseInt(getParameterByName('effort'));
+		$('#g_Problem_solving')[0].innerHTML= parseInt(getParameterByName('creativity'));
+		$('#g_Ability_to_Lead')[0].innerHTML= parseInt(getParameterByName('ability'));
+		$('#g_Attitude_Servitude')[0].innerHTML= parseInt(getParameterByName('attitude'));
+		$('#g_Team_Player')[0].innerHTML= parseInt(getParameterByName('teamplayer'));
+		$('#g_Workspace_Organization')[0].innerHTML= parseInt(getParameterByName('workspace'));
+
+		var a = 0.05; var b = 0.10; var c = 0.20;
+		$('#g_KPI_Percentage')[0].innerHTML= ((parseInt(getParameterByName('communication'))*a) + (parseInt(getParameterByName('appearance'))*a) + (parseInt(getParameterByName('effort'))*b) + (parseInt(getParameterByName('creativity'))*a) + (parseInt(getParameterByName('ability'))*a) +
+		 (parseInt(getParameterByName('attitude'))*b) + (parseInt(getParameterByName('teamplayer'))*a) + (parseInt(getParameterByName('workspace'))*a)).toFixed(2);
+
+		 $('#m_KPI_Percentage')[0].innerHTML= ((parseInt(getParameterByName('attendance'))*a) + (parseInt(getParameterByName('punctuality'))*a) + (parseInt(getParameterByName('deliverance'))*b) + (parseInt(getParameterByName('accomplishment'))*c) + (parseInt(getParameterByName('proactiveness'))*a) +
+ 		 (parseInt(getParameterByName('improvements'))*b) + (parseInt(getParameterByName('responsibility'))*a)).toFixed(2);
+	</script>
+</body>
+</html>
